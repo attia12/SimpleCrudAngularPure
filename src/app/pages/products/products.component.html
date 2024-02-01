@@ -1,0 +1,41 @@
+<div class="container-lg">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-8"><h2>Product Form</h2></div>
+          <br>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info add-new" style="margin-left: 130px; margin-bottom: 30px;" (click)="openAddProductModal()">
+              <i class="fa fa-plus"></i> Add New
+            </button>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Product Category</th>
+          <th>Phone</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.phone }}</td>
+          <td>{{ product.date }}</td>
+          <td style="text-align: center; padding: 10px;">
+            <a class="material-icons edit" title="Edit" data-toggle="tooltip" (click)="openEditProductModal(product.id)">edit</a>
+            <span style="margin: 0 20px;">
+            <a class="material-icons delete" title="Delete" data-toggle="tooltip" (click)="deleteProduct(product.id)">delete</a></span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

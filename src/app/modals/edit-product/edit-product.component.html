@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit Product</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <label for="editProductName">Product Name</label>
+      <input type="text" class="form-control" id="editProductName" [(ngModel)]="editedProduct.name" name="editProductName">
+    </div>
+    <div class="form-group">
+      <label for="editProductCategory">Product Category</label>
+      <input type="text" class="form-control" id="editProductCategory" [(ngModel)]="editedProduct.category" name="editProductCategory">
+    </div>
+    <div class="form-group">
+      <label for="editPhone">Phone</label>
+      <input type="text" class="form-control" id="editPhone" [(ngModel)]="editedProduct.phone" name="editPhone">
+    </div>
+    <div class="form-group">
+      <label for="editDate">Date</label>
+      <input type="text" class="form-control" id="editDate" [(ngModel)]="editedProduct.date" name="editDate">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Close</button>
+  <button type="button" class="btn btn-primary" (click)="editProduct()">Save Changes</button>
+</div>
+

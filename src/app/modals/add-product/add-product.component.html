@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add New Product</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form #f="ngForm">
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="newProduct.name" #productName="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="productCategory">Product Category</label>
+      <input type="text" class="form-control" id="productCategory" name="productCategory" [(ngModel)]="newProduct.category" #productCategory="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="newProduct.phone" #phone="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="text" class="form-control" id="date" name="date" [(ngModel)]="newProduct.date" #date="ngModel">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Close</button>
+  <button type="button" class="btn btn-primary" (click)="addProduct()">Add Product</button>
+</div>
+
